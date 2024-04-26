@@ -1,0 +1,204 @@
+﻿code,country,rate
+ABW,Aruba,0.5
+AFG,Afghanistan,-0.7
+AGO,Angola,9.2
+ALB,Albania,1.9
+ARE,United Arab Emirates,4.1
+ARG,Argentina,26.5
+ARM,Armenia,3.7
+ATG,Antigua and Barbuda,1
+AUS,Australia,1.5
+AUT,Austria,0.9
+AZE,Azerbaijan,4
+BDI,Burundi,5.5
+BEL,Belgium,0.6
+BEN,Benin,0.3
+BFA,Burkina Faso,0.9
+BGD,Bangladesh,6.2
+BGR,Bulgaria,-0.1
+BHR,Bahrain,1.8
+BHS,"Bahamas, The",1.9
+BIH,Bosnia and Herzegovina,-1
+BLR,Belarus,13.5
+BLZ,Belize,-0.9
+BOL,Bolivia,4.1
+BRA,Brazil,9
+BRB,Barbados,-1.1
+BRN,Brunei Darussalam,-0.4
+BTN,Bhutan,4.6
+BWA,Botswana,3.1
+CAF,Central African Republic,4.5
+CAN,Canada,1.1
+CHE,Switzerland,-1.1
+CHL,Chile,4.3
+CHN,China,1.4
+CIV,Côte d'Ivoire,1.2
+CMR,Cameroon,2.7
+COD,"Congo, Dem. Rep.",1
+COG,"Congo, Rep.",3.2
+COL,Colombia,5
+COM,Comoros,2
+CPV,Cabo Verde,0.1
+CRI,Costa Rica,0.8
+CUW,Curacao,0.3
+CYM,Cayman Islands,-2.4
+CYP,Cyprus,-2.1
+CZE,Czech Republic,0.3
+DEU,Germany,0.5
+DJI,Djibouti,2.1
+DMA,Dominica,-0.8
+DNK,Denmark,0.5
+DOM,Dominican Republic,0.8
+DZA,Algeria,4.4
+ECU,Ecuador,4
+EGY,"Egypt, Arab Rep.",10.3
+ERI,Eritrea,9
+ESP,Spain,-0.5
+EST,Estonia,-0.5
+ETH,Ethiopia,10.1
+FIN,Finland,-0.2
+FJI,Fiji,1.4
+FRA,France,0
+FSM,"Micronesia, Fed. Sts.",-0.2
+GAB,Gabon,-0.1
+GBR,United Kingdom,0.4
+GEO,Georgia,4
+GHA,Ghana,17.1
+GIN,Guinea,8.2
+GMB,"Gambia, The",6.8
+GNB,Guinea-Bissau,1.5
+GNQ,Equatorial Guinea,1.7
+GRC,Greece,-1.7
+GRD,Grenada,-0.6
+GTM,Guatemala,2.4
+GUY,Guyana,-0.9
+HKG,"Hong Kong SAR, China",3
+HND,Honduras,3.2
+HRV,Croatia,-0.5
+HTI,Haiti,7.5
+HUN,Hungary,-0.1
+IDN,Indonesia,6.4
+IND,India,5.9
+IRL,Ireland,-0.3
+IRN,"Iran, Islamic Rep.",12.5
+IRQ,Iraq,1.4
+ISL,Iceland,1.6
+ISR,Israel,-0.6
+ITA,Italy,0
+JAM,Jamaica,3.7
+JOR,Jordan,-0.9
+JPN,Japan,0.8
+KAZ,Kazakhstan,6.7
+KEN,Kenya,6.6
+KGZ,Kyrgyz Republic,6.5
+KHM,Cambodia,1.2
+KIR,Kiribati,0.6
+KNA,St. Kitts and Nevis,-2.3
+KOR,"Korea, Rep.",0.7
+KWT,Kuwait,3.3
+LAO,Lao PDR,1.3
+LBN,Lebanon,-3.8
+LBR,Liberia,7.7
+LBY,Libya,9.8
+LCA,St. Lucia,-1
+LIE,Liechtenstein,-1.1
+LKA,Sri Lanka,3.8
+LSO,Lesotho,4.3
+LTU,Lithuania,-0.9
+LUX,Luxembourg,0.5
+LVA,Latvia,0.2
+MAC,"Macao SAR, China",4.6
+MAR,Morocco,1.6
+MDA,Moldova,9.6
+MDG,Madagascar,7.4
+MDV,Maldives,1.9
+MEX,Mexico,2.7
+MHL,Marshall Islands,-2.2
+MKD,"Macedonia, FYR",-0.3
+MLI,Mali,1.4
+MLT,Malta,1.1
+MMR,Myanmar,10
+MNE,Montenegro,1.6
+MNG,Mongolia,6.6
+MOZ,Mozambique,3.5
+MRT,Mauritania,0.5
+MSR,Montserratit,-1.2
+MTQ,Martinique,
+MUS,Mauritius,1.3
+MWI,Malawi,21.9
+MYS,Malaysia,2.1
+NAM,Namibia,3.4
+NCL,New Caledonia,0.6
+NER,Niger,1
+NGA,Nigeria,9
+NIC,Nicaragua,4
+NIU,Niue,
+NLD,Netherlands,0.6
+NOR,Norway,2.2
+NPL,Nepal,7.2
+NRU,Nauru,9.8
+NZL,New Zealand,0.3
+OMN,Oman,0.1
+PAK,Pakistan,2.5
+PAN,Panama,0.1
+PER,Peru,3.5
+PHL,Philippines,1.4
+PLW,Palau,0.9
+PNG,Papua New Guinea,6
+POL,Poland,-0.9
+PRI,Puerto Rico,-0.8
+PRT,Portugal,0.5
+PRY,Paraguay,3.1
+PSE,West Bank and Gaza,1.4
+QAT,Qatar,1.9
+ROU,Romania,-0.6
+RUS,Russian Federation,15.5
+RWA,Rwanda,2.5
+SAU,Saudi Arabia,1.2
+SDN,Sudan,16.9
+SEN,Senegal,0.1
+SGP,Singapore,-0.5
+SHN,Saint Helena,1.9
+SLB,Solomon Islands,-0.6
+SLE,Sierra Leone,6.7
+SLV,El Salvador,-0.7
+SMR,San Marino,0.2
+SRB,Serbia,1.4
+SSD,South Sudan,52.8
+STP,São Tomé and Principe,5.3
+SUR,Suriname,6.9
+SVK,Slovak Republic,-0.3
+SVN,Slovenia,-0.5
+SWE,Sweden,0
+SWZ,Swaziland,5
+SYC,Seychelles,4
+SYR,Syrian Arab Republic,26
+TCA,Turks and Caicos Islands,2.2
+TCD,Chad,6.8
+TGO,Togo,1.8
+THA,Thailand,-0.9
+TJK,Tajikistan,5.5
+TKM,Turkmenistan,7.4
+TLS,Timor-Leste,0.7
+TON,Tonga,-1.1
+TTO,Trinidad and Tobago,4.7
+TUN,Tunisia,4.4
+TUR,Turkey,7.7
+TUV,Tuvalu,3.1
+TZA,Tanzania,5.6
+UGA,Uganda,3.7
+UKR,Ukraine,48.6
+URY,Uruguay,8.7
+USA,United States,0.1
+UZB,Uzbekistan,8.5
+VCT,St. Vincent and the Grenadines,-1.7
+VEN,"Venezuela, RB",121.4
+VGB,British Virgin Islands,0.8
+VNM,Vietnam,0.6
+VUT,Vanuatu,2.5
+WSM,Samoa,1.9
+XXK,Kosovo,-0.5
+YEM,"Yemen, Rep.",39.4
+ZAF,South Africa,4.5
+ZMB,Zambia,10.1
+ZWE,Zimbabwe,-2.4
