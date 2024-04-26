@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+<style>
+    .d3-tip {
+        line-height: 1;
+        padding: 6px;
+        background: white;
+        border-radius: 4px solid black;
+        font-size: 12px;
+    }
+
+    p {
+        font-family: Helvetica;
+    }
+
+    .map {
+        float: left;
+        margin: 20px;
+    }
+
+    .plot1 {
+        position: absolute;
+        top: 70px;
+        right: 160px;
+        margin: 10px;
+    }
+
+    .plot2 {
+        position: absolute;
+        bottom: 0px;
+        right: 160px;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+<!-- Create an element where the map will take place -->
+<div class="tab">
+    <button class="tablinks" id="defaultButton" onclick="openSubTab(event, '2014')">2014</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            document.getElementById("defaultButton").click();
+        });
+    </script>
+    <button class="tablinks" onclick="openSubTab(event, '2015')">2015</button>
+    <button class="tablinks" onclick="openSubTab(event, '2016')">2016</button>
+    <button class="tablinks" onclick="openSubTab(event, '2017')">2017</button>
+    <button class="tablinks" onclick="openSubTab(event, '2018')">2018</button>
+    <button class="tablinks" onclick="openSubTab(event, '2019')">2019</button>
+    <button class="tablinks" onclick="openTab(event, 'References')">References</button>
+</div>
+
+<body>
+    <div name="year" id="2014" class="tabcontent" value="2014">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2014" width="600" height="500"></svg>
+            <svg id="mixPlot12014" width="350" height="250" class="plot1"></svg>
+            <svg id="mixPlot22014" width="350" height="250" class="plot2"></svg>
+        </div>
+    </div>
+    <div name="year" id="2015" class="tabcontent" value="2015">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2015" width="600" height="500"></svg>
+            <svg id="mixPlot12015" width="350" height="300" class="plot1"></svg>
+            <svg id="mixPlot22015" width="350" height="300" class="plot2"></svg>
+        </div>
+
+    </div>
+    <div name="year" id="2016" class="tabcontent" value="2016">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2016" width="600" height="500"></svg>
+            <svg id="mixPlot12016" width="350" height="300" class="plot1"></svg>
+            <svg id="mixPlot22016" width="350" height="300" class="plot2"></svg>
+        </div>
+    </div>
+    <div name="year" id="2017" class="tabcontent" value="2017">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2017" width="600" height="500"></svg>
+            <svg id="mixPlot12017" width="350" height="300" class="plot1"></svg>
+            <svg id="mixPlot22017" width="350" height="300" class="plot2"></svg>
+        </div>
+    </div>
+    <div name="year" id="2018" class="tabcontent" value="2018">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2018" width="600" height="500"></svg>
+            <svg id="mixPlot12018" width="350" height="300" class="plot1"></svg>
+            <svg id="mixPlot22018" width="350" height="300" class="plot2"></svg>
+        </div>
+    </div>
+    <div name="year" id="2019" class="tabcontent" value="2019">
+        <div><br>
+            <input type="checkbox" id="DJ" name="DJ" value="Dow Jones">
+            <label for="DJ">Dow Jones</label>
+            <input type="checkbox" id="LN" name="LN" value="FTSE-100">
+            <label for="LN">FTSE-100</label>
+            <input type="checkbox" id="ZR" name="ZR" value="Euro Stoxx 600">
+            <label for="ZR">Euro Stoxx 600</label>
+            <input type="checkbox" id="ND" name="ND" value="Nifty-50">
+            <label for="ND">NIFTY-50</label>
+            <input type="checkbox" id="CH" name="CH" value="Shenzhen Index">
+            <label for="CH">Shenzhen Index</label>
+            <input type="checkbox" id="TY" name="TY" value="Nikkei-225">
+            <label for="TY">Nikkei-225</label><br>
+            <svg id="mainPlot2019" width="600" height="500"></svg>
+            <svg id="mixPlot12019" width="350" height="300" class="plot1"></svg>
+            <svg id="mixPlot22019" width="350" height="300" class="plot2"></svg>
+        </div>
+    </div>
+    <div name="References" id="References" class="tabcontent" value="References">
+        <h2><u>Dataset Used</u></h2>
+        <list>
+            <li><b>Inflation Rates and Index</b>: <br> https://www.worldbank.org/en/research/brief/inflation-database</li>
+            <li><b>Source for Stock Market Indexes</b>: <br> https://finance.yahoo.com/</li>
+            <li><b>Source for Stock Market Indexes</b>:<br> https://uk.investing.com/indices/us-30-historical-data</li>
+            <li><b>Source for GeoJSON</b>:<br> https://d3-graph-gallery.com/graph/choropleth_hover_effect.html</li>
+        </list>
+        <h3><b>References used in Source Code</b></h3>
+        <li>https://d3-graph-gallery.com/graph/choropleth_hover_effect.html</li>
+        <li>https://d3js.org/d3-scale/ordinal</li>
+        <li>https://datawanderings.com/2019/10/28/tutorial-making-a-line-chart-in-d3-js-v-5/</li>
+        <h3><b>Data preprocessing</b></h3>
+        <li>The data contained multiple indexes of inflation. As we are only using the consumper price index, the rest were filtered out.</li>
+        <li>For indexes, the opening, closing, low and high prices were given. The mean of low and high prices was taken as a plotting </li>
+        <li>Every numeric/float value represented as string (with or without a comma) were converted to float/int for plotting.</li>
+    </div>
+</body>
+<script src="./Map.js"></script>
